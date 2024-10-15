@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FiPhone, FiMail } from 'react-icons/fi';
 
 function Contact() {
   return (
@@ -13,25 +14,44 @@ function Contact() {
         Get in Touch
       </motion.h1>
       
-      <div className='text-center tracking-tighter'>
-        <motion.p
-          // whileInView={{ opacity: 1, x: 0 }}
-          // initial={{ opacity: 0, x: -100 }}
-          // transition={{ duration: 1 }}
-          // className='my-4'
+      <p className='text-center mb-8'>
+        Feel free to contact Me! Submit your queries here, and I will get back to you as soon as possible.
+      </p>
+
+      <div className='flex flex-wrap justify-center gap-5 md:gap-10'>
+        {/* Phone Section - Whole div is clickable */}
+        <a 
+          href="tel:+917034434303"
+          className='w-full sm:w-1/2 md:w-1/3'
         >
-          +91 7034434303
-        </motion.p>
-        
-        <motion.a
-          // whileInView={{ opacity: 1, x: 0 }}
-          // initial={{ opacity: 0, x: 100 }}  // Starts off shifted to the right
-          // transition={{ duration: 1 }}      // Moves over 1 second
-          // href="mailto:abhisheksr47@gmail.com"
-          // className='border-b'
+          <motion.div
+            className='bg-neutral-900 rounded-lg p-8 text-center flex flex-col items-center'
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <FiPhone className='text-3xl text-purple-400 mb-4' />
+            <p className='rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-400'>
+              +91 7034434303
+            </p>
+          </motion.div>
+        </a>
+
+        {/* Email Section - Whole div is clickable */}
+        <a 
+          href="mailto:abhisheksr47@gmail.com"
+          className='w-full sm:w-1/2 md:w-1/3'
         >
-          abhisheksr47@gmail.com
-        </motion.a>
+          <motion.div
+            className='bg-neutral-900 rounded-lg p-8 text-center flex flex-col items-center'
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <FiMail className='text-3xl text-purple-400 mb-4' />
+            <p className='rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-400'>
+              abhisheksr47@gmail.com
+            </p>
+          </motion.div>
+        </a>
       </div>
     </div>
   );

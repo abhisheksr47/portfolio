@@ -51,7 +51,7 @@ function Education() {
                 <div className='inline-flex flex-wrap gap-2 mt-2'>
                   {edu.subjects.map((sub, index) => (
                     <span 
-                      className='rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800' 
+                      className='rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-400' 
                       key={index}
                     >
                       {sub}
