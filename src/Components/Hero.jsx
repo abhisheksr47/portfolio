@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
+import gif from "../Assets/opengif.gif"
 
 const hero_content = {
   text: "Innovator at the intersection of technology and design, with a passion for pushing creative boundaries. My journey has led me through the realms of DevOps, cloud architecture, machine learning, and user experience design. As a freelance professional, I've honed my skills in both graphic design and software development, crafting bespoke solutions for diverse clients."
@@ -70,14 +71,15 @@ function Hero() {
         </div>
 
         <div className='w-full lg:w-1/2 lg:p-8'>
-          <div className='flex justify-center'>
+          <div className='flex justify-center items-center'>
             {/* <motion.img
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
               className='rounded-3xl' 
-              src="https://i.pinimg.com/originals/b7/aa/e5/b7aae5305b1850ec121304b5077eaf01.gif" 
+              src={gif} 
               alt="Animated GIF"
+              
             /> */}
           </div>
         </div>
@@ -87,5 +89,3 @@ function Hero() {
 }
 
 export default Hero;
-
-
