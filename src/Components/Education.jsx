@@ -6,7 +6,7 @@ const education = [
         year: "2023-2025",
         course: "Master of Computer Applications (MCA)",
         college: "TKM College of Engineering, Kollam, Kerala, India",
-        subjects: ["Machine Learning", "Deep Learning", "Cloud Computing", "Cyber Security","DBMS","Fucntional Programming"]
+        subjects: ["Machine Learning", "Deep Learning", "Cloud Computing", "Cyber Security","DBMS","Functional Programming"]
     },
     {
         year: "2019-2022",
