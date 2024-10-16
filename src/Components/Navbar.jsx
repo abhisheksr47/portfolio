@@ -13,7 +13,7 @@ function Navbar() {
         <a href='https://www.linkedin.com/in/abhishek-s-r-56a305257/' target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
-        <a href='https://github.com/abhishek123-asr' target="_blank" rel="noopener noreferrer">
+        <a href='https://github.com/abhisheksr47' target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
         {/* Cooler Download CV button */}
