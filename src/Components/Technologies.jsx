@@ -1,6 +1,6 @@
 import React from 'react';
 import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb, SiNodedotjs, SiExpress, SiDocker } from "react-icons/si";
+import { SiMongodb, SiNodedotjs, SiExpress, SiMysql } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -64,7 +64,7 @@ function Technologies() {
     { Icon: SiNodedotjs, name: "Node.js", color: "text-green-400", duration: 3 },
     { Icon: SiExpress, name: "Express", color: "text-gray-400", duration: 5 },
     { Icon: SiMongodb, name: "MongoDB", color: "text-green-500", duration: 2 },
-    { Icon: SiDocker, name: "Docker", color: "text-blue-400", duration: 6 },
+    { Icon: SiMysql, name: "MySql", color: "text-blue-400", duration: 6 },
     { Icon: FaAws, name: "AWS", color: "text-orange-400", duration: 4 },
   ];
 
