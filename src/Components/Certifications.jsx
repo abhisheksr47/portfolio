@@ -62,11 +62,11 @@ const Certifications = () => {
       </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:mx-auto lg:max-w-5xl px-4">
         {certifications.map((cert, index) => (
-          <motion.div
+          <motion.div 
+          whileInView={{opacity:1,x:0}}
+          initial={{opacity:0,x:100}}
+          transition={{duration:1}}
             key={index}
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -100 }}
-            transition={{ duration: 1.5 }}
             className="group relative"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-lg transform transition-transform duration-300 group-hover:scale-105" />
@@ -74,10 +74,10 @@ const Certifications = () => {
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block relative p-6 rounded-lg border border-neutral-800/50 backdrop-blur-sm transition-all duration-300 hover:border-neutral-700"
+              className="block relative p-6 rounded-lg border border-neutral-800/50 backdrop-blur-sm transition-all duration-300"
             >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 rounded-lg bg-neutral-900/50 border border-neutral-800 transition-all duration-300 group-hover:border-neutral-600 group-hover:bg-neutral-800/50">
+              <div className="flex items-stretch gap-4">
+                <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 rounded-lg bg-neutral-900/50 border border-neutral-800 transition-all duration-300 group-hover:border-neutral-600 group-hover:bg-neutral-800/50">
                   {cert.icon}
                 </div>
                 <div className="flex-1">
