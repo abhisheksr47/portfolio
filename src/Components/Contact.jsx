@@ -36,9 +36,9 @@ const Contact = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:mx-auto lg:max-w-5xl px-4">
         {contactMethods.map((method, index) => (
           <motion.div 
-          whileInView={{opacity:1,x:0}}
-          initial={{opacity:0,x:100}}
-          transition={{duration:1}}
+            whileInView={{opacity:1, x:0}}
+            initial={{opacity:1, x:100}}
+            transition={{duration:1}}
             key={index}
             className="group relative"
           >
@@ -47,16 +47,16 @@ const Contact = () => {
               href={method.href}
               className="block relative p-6 rounded-lg border border-neutral-800/50 backdrop-blur-sm transition-all duration-300"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                 <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 rounded-lg bg-neutral-900/50 transition-all duration-300">
                   {method.icon}
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <h3 className="text-lg font-medium text-white mb-2">
                     {method.type}
                   </h3>
-                  <div>
-                    <span className="inline-block rounded-full bg-purple-500/10 border border-purple-500/20 px-3 py-1 text-sm text-purple-400 transition-all duration-300 hover:bg-purple-500/20 hover:border-purple-500/30 hover:text-purple-300 transform hover:-translate-y-0.5">
+                  <div className="max-w-full overflow-hidden">
+                    <span className="inline-block max-w-full overflow-hidden text-ellipsis rounded-full bg-purple-500/10 border border-purple-500/20 px-3 py-1 text-sm text-purple-400 transition-all duration-300 hover:bg-purple-500/20 hover:border-purple-500/30 hover:text-purple-300 transform hover:-translate-y-0.5">
                       {method.value}
                     </span>
                   </div>

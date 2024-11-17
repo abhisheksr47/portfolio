@@ -56,7 +56,7 @@ const Project = () => {
         {projects.map((project, index) => (
           <motion.div 
           whileInView={{opacity:1,x:0}}
-          initial={{opacity:0,x:100}}
+          initial={{opacity:1,x:100}}
           transition={{duration:1}}
           key={index} className="group relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-lg transform transition-transform duration-300 group-hover:scale-105" />
