@@ -6,7 +6,7 @@ const projects = [
   {
     project: "Full-fledged eCommerce platform",
     tech_stack: ["MongoDB", "Express.js", "React", "Node.js"],
-    description: "Built scalable architecture with MERN stack for efficient data handling. Managed MongoDB for robust storage.",
+    description: " Developed a full-scale e-commerce platform with features like product catalog management, user profiles, shopping cart, order processing, and secure payment integration.",
     source_code: "https://github.com/abhishek123-asr/eshop",
     icon: <Store size={40} className="text-purple-400" />
   },

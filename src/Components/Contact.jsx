@@ -13,7 +13,7 @@ const Contact = () => {
     {
       type: "Email",
       value: "abhisheksr47@gmail.com",
-      href: "mailto:abhisheksr47@gmail.com",
+      href:  "mailto:abhisheksr47@gmail.com?subject=I'd%20love%20to%20hire%20you%20for%20a%20role!&body=Hey%20Abhishek,%0A%0AWe%20are%20engaging%20you%20for%20a%20role%20_____.%20Please%20let%20us%20know%20your%20availability%20and%20share%20your%20thoughts.%0A%0AThank%20you!",
       icon: <FiMail size={40} className="text-purple-400" />
     }
   ];
