@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { ExternalLink, Store, Cloud, Calendar, Layout, Palette } from 'lucide-react';
+import { ExternalLink, Store, Cloud, Calendar, Layout, Palette, View,MessageCircleWarning} from 'lucide-react';
 
 const projects = [
   {
@@ -11,10 +11,25 @@ const projects = [
     icon: <Store size={40} className="text-purple-400" />
   },
   {
+    project: "Enhanced Iris Authentication via Deep Learning and Homomorphic Encryption",
+    tech_stack: ["Python", "TensorFlow", "Keras", "TransUNet", "UNet", "Attention UNet", "Label Studio",],
+    description: "Developed an advanced iris authentication system using deep learning models for segmentation (TransUNet, UNet, Attention UNet) and homomorphic encryption to ensure secure and privacy-preserving biometric authentication.",
+    source_code: "https://github.com/abhisheksr47/enhanced-iris-authentication.git",
+    icon: <View size={40} className="text-purple-400" />
+  },
+  {
     project: "DevOps Project: AWS Infrastructure Automation",
     tech_stack: ["AWS (EC2, IAM, RDS, VPC)"],
     description: "Automated AWS infrastructure provisioning with Terraform. Managed EC2 instances, RDS databases, and VPC configurations for optimal performance and security.",
     icon: <Cloud size={40} className="text-purple-400" />
+  },
+  ,
+  {
+    project: "Offensive Comment Filtering Using Deep Learning",
+    tech_stack: ["Python", "TensorFlow", "Keras", "LSTM", "Word2Vec", "GloVe", "Flask"],
+    description: "Developed a system to classify and filter offensive comments using LSTM models with word embeddings (GloVe, Word2Vec), ensuring a safer online environment by detecting harmful text.",
+    source_code: "https://github.com/abhisheksr47/offensive_comment_filtering",
+    icon: <MessageCircleWarning size={40} className="text-purple-400" />
   },
   {
     project: "Advanced Event Handling Platform",
@@ -41,24 +56,24 @@ const projects = [
 const Project = () => {
   return (
     <div className="border-b border-neutral-900 pb-24">
-      <motion.h1 
-        whileInView={{opacity:1, y:0}}
-        initial={{opacity:0, y:-100}}
-        transition={{duration:1.5}}
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
         className="my-20 text-center text-4xl"
       >
         Projects
       </motion.h1>
 
       <div
-     
-      className="grid grid-cols-1 gap-8 lg:mx-auto lg:max-w-5xl px-4">
+
+        className="grid grid-cols-1 gap-8 lg:mx-auto lg:max-w-5xl px-4">
         {projects.map((project, index) => (
-          <motion.div 
-          whileInView={{opacity:1,x:0}}
-          initial={{opacity:1,x:100}}
-          transition={{duration:1}}
-          key={index} className="group relative">
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 1, x: 100 }}
+            transition={{ duration: 1 }}
+            key={index} className="group relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-lg transform transition-transform duration-300 group-hover:scale-105" />
             <div className="block relative p-6 rounded-lg border border-neutral-800/50 backdrop-blur-sm transition-all duration-300">
               <div className="flex flex-col md:flex-row gap-6">
@@ -74,8 +89,8 @@ const Project = () => {
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech_stack.map((tech, techIndex) => (
-                      <span 
-                        key={techIndex} 
+                      <span
+                        key={techIndex}
                         className="inline-block rounded-full bg-purple-500/10 border border-purple-500/20 px-3 py-1 text-sm text-purple-400 transition-all duration-300 hover:bg-purple-500/20 hover:border-purple-500/30 hover:text-purple-300"
                       >
                         {tech}
