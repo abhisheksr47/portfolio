@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@f3c3c2c3dd2f50bcaf11b1d1d3e2f04be40c07c3
+        uses: actions/upload-artifact@v3
         with:
           name: production-files
           path: ./dist
@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@13a156fefc62f1ed9f7d5c5c265fa1b14a9a583d
+        uses: actions/download-artifact@v3
         with:
           name: production-files
           path: ./dist
