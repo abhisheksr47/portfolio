@@ -7,7 +7,9 @@ function Navbar() {
     <nav className="mb-20 flex items-center justify-between py-6">
       <div className='flex flex-shrink-0 items-center'>
         {/* Logo visible only on medium and larger screens */}
-        <img className='hidden md:block mx-2 w-10' src={logo} alt="Logo" />
+        <a href="/">
+          <img className="hidden md:block mx-2 w-10" src={logo} alt="Logo" />
+        </a>
       </div>
       <div className='m-8 flex items-center justify-center gap-4 text-2xl'>
         <a href='https://www.linkedin.com/in/abhishek-s-r-56a305257/' target="_blank" rel="noopener noreferrer">

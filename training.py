@@ -68,45 +68,23 @@ def countprint():
             print(key,end=' ')
 
 
-def test_addition(self):
-    calc = Calculator()
-    self.assertEqual(calc.add(2, 3), 5)  # The function is called at runtime and validated dynamically
+def balanced():
+    a=input('enter string')
+    stack=[]
+    match_phrase={')':'(','}':'{',']':'['}
 
-import unittest
+    for char in a:
+        if char in match_phrase.values():
+            stack.append(char)
+        elif char in match_phrase.keys():
+            if stack and stack[-1]==match_phrase[char]:
+                stack.pop()
+            else:
+                return False
+    return not stack
 
-# Define the Calculator class with an add method
-class Calculator:
-    def add(self, a, b):
-        return a + b
-
-# Test class that will contain the unit tests
-class TestCalculator(unittest.TestCase):
-    
-    # Test case for the add method
-    def test_addition(self):
-        calc = Calculator()
-        # Assertion to check if 2 + 3 equals 5
-        self.assertEqual(calc.add(2, 3), 5)  # The function is called at runtime and validated dynamically
-    
-    # Test case for addition with negative numbers
-    def test_add_negative(self):
-        calc = Calculator()
-        # Assertion to check if -1 + -1 equals -2
-        self.assertEqual(calc.add(-1, -1), -2)
-    
-    # Test case for addition with zero
-    def test_add_zero(self):
-        calc = Calculator()
-        # Assertion to check if 0 + 0 equals 0
-        self.assertEqual(calc.add(0, 0), 0)
-    
-    # Test case for addition with a large number
-    def test_add_large_numbers(self):
-        calc = Calculator()
-        # Assertion to check if 1000000 + 5000000 equals 6000000
-        self.assertEqual(calc.add(1000000, 5000000), 6000000)
-
-# Run the tests when the script is executed
-if __name__ == "__main__":
-    unittest.main()
+if balanced():
+    print('balanced')
+else:
+    print('not balanced')
 
