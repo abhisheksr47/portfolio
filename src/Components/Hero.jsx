@@ -17,10 +17,8 @@ const container = (delay) => ({
 });
 
 const titles = [
-  "Fullstack Developer", 
+  "DevOps Engineer", 
   "Backend Developer", 
-  "UI/UX Designer", 
-  "Cloud Specialist", 
   "Graphic Designer", 
   "3D Modeler"
 ];
